@@ -1,12 +1,14 @@
 package com.abb.repository;
 
 import com.abb.model.Speaker;
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
 import java.util.List;
 
 @Repository("speakerRepository")
+@Profile("dev")
 public class HibernateSpeakerRepositoryImpl implements SpeakerRepository {
     @Override
     public List<Speaker> findAll() {
